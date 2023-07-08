@@ -4,7 +4,7 @@ import Image from 'next/image'
 import { notFound } from "next/navigation"
 
 async function getData(id) {
-  const res = await fetch(`https://jsonplaceholder.typicode.com/posts/${id}`, { cache: 'no-store' });
+  const res = await fetch(`http://localhost:3000/api/posts/${id}`, { cache: 'no-store' });
   // The return value is *not* serialized
   // You can return Date, Map, Set, etc.
  
@@ -28,22 +28,24 @@ const BlogPost = async ({params}) => {
             {data.title}
           </h1>
           <p className={styles.desc}>
-            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Minus dolor dolorum numquam tempore explicabo non, optio voluptatibus architecto aliquam vero. Voluptates tenetur temporibus hic quibusdam culpa, nemo laborum ullam vero.
+            {data.desc}
           </p>
           <div className={styles.author}>
             <Image
-              src="https://images.pexels.com/photos/3130810/pexels-photo-3130810.jpeg"
+              // src="https://images.pexels.com/photos/3130810/pexels-photo-3130810.jpeg"
+              src={data.img}
               alt=""
               width={40}
               height={40}
               className={styles.avatar}
             />
-            <span className={styles.username}>Miraz Farid</span>
+            <span className={styles.username}>{data.username}</span>
           </div>
         </div>
         <div className={styles.imageContainer}>
           <Image
-            src="https://images.pexels.com/photos/3130810/pexels-photo-3130810.jpeg"
+            // src="https://images.pexels.com/photos/3130810/pexels-photo-3130810.jpeg"
+            src={data.img}
             alt=""
             fill={true}
             className={styles.image}
@@ -53,7 +55,7 @@ const BlogPost = async ({params}) => {
 
       <div className={styles.content}>
         <p className={styles.text}>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam unde odio veniam quisquam consequuntur quis blanditiis dolorem quia ullam? Odit dignissimos iure, delectus quos repellat labore ipsum iste illo illum.
+          {data.content}
         </p>
         <br />
         <br />
