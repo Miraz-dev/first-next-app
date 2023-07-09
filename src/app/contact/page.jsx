@@ -6,7 +6,7 @@ import Button from '@/components/Button/Button'
 
 export const metadata = {
   title: 'Miraz Dev Contact Information',
-  description: 'This is contact Page',
+  description: 'This is contact Page'
 }
 
 
@@ -15,7 +15,7 @@ const Contact = () => {
     <div className={styles.container}>
 
       {/* Upper part */}
-      <h1 className={styles.title}>Let's Keep in Touch</h1>
+      <h1 className={styles.title}>Lets Keep in Touch</h1>
 
       {/* Below Part */}
       <div className={styles.content}>
