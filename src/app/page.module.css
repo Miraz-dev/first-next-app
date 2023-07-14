@@ -23,7 +23,7 @@
   object-fit: contain;
 
   /* Animation */
-  /* animation: move infinite 3s ease alternate; */
+  animation: move infinite 3s ease alternate;
 }
 
 @keyframes move {

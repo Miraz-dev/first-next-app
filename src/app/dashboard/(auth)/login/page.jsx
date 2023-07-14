@@ -6,14 +6,18 @@ import { useRouter } from 'next/navigation'
 
 const Login = () => {
 
-  // const session = useSession();
-  // const router = useRouter();
+  const session = useSession();
+  const router = useRouter();
 
 
+  if (session.status === "loading") {
+    return <p>Loading...</p>;
+  }
 
-  // if(session.status === "authenticated") {
-  //   router?.push("/dashboard");
-  // }
+
+  if(session.status === "authenticated") {
+    router?.push("/dashboard");
+  }
 
   const handleSubmit = (e) => {
     e.preventDefault();

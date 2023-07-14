@@ -26,7 +26,7 @@
     object-fit: contain;
 
     /* Animation */
-    /* animation: move infinite 3s ease alternate; */
+    animation: move infinite 3s ease alternate;
     /* alternate: When the animation end, its going to make the same movement */
 }
 
