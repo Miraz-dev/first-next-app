@@ -23,3 +23,14 @@ export default function Home() {
     </div>
   )
 }
+
+
+// MONGO = mongodb+srv://mirazdev:mirazdev@cluster0.3r2hlmg.mongodb.net/test?retryWrites=true&w=majority
+
+// GOOGLE_CLIENT_ID = 942664976926-f10tu7abq2pt8l9d3mkmhm9rbn8jjk10.apps.googleusercontent.com
+
+// GOOGLE_CLIENT_SECRET = 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
+
+// NEXTAUTH_SECRET="Thisisanexample"
+
+// NEXTAUTH_URL = "http://localhost:3000"
